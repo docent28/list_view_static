@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -38,8 +37,29 @@ class _myListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-
+      padding: EdgeInsets.symmetric(horizontal: 450),
+      scrollDirection: Axis.horizontal,
+      itemExtent: 300,
+      children: [
+        ListTile(
+          title: Text("Sun"),
+          subtitle: Text("Today Clear"),
+          leading: Icon(Icons.wb_sunny),
+          trailing: Icon(Icons.keyboard_arrow_right),
+        ),
+        ListTile(
+          title: Text("Cloudy"),
+          subtitle: Text("Today Clear"),
+          leading: Icon(Icons.wb_cloudy),
+          trailing: Icon(Icons.keyboard_arrow_right),
+        ),
+        ListTile(
+          title: Text("Show"),
+          subtitle: Text("Today Clear"),
+          leading: Icon(Icons.ac_unit),
+          trailing: Icon(Icons.keyboard_arrow_right),
+        ),
+      ],
     );
   }
 }
-
